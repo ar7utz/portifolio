@@ -6,11 +6,8 @@
     text-decoration: none;
 }
 
-#corpo{
-}
-
-h1{
-    text-align: left;    
+#h1{
+    text-align: left;  
 }
 
 header{
@@ -25,7 +22,7 @@ nav{
 }
 
 /**/
-nav li {
+nav li{
     display: inline-block;
     margin: 0 0 0 15px;
 }
@@ -33,4 +30,18 @@ nav li {
 /**/
 nav li a{
     color: #fff;
+}
+
+nav a:hover{
+    color: #323223;
+}
+
+#sobre{
+    margin-left: 35px;
+}
+
+form{
+    width: 100%;
+    background-color: #323223;
+
 }
