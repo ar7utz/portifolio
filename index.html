@@ -2,50 +2,171 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="./assets/css/output.css">
     <title>Portifólio</title>
 </head>
-<body>
-    <div>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4">
         <main>
             <div class="w-full h-50 py-6 flex justify-between items-center">
-
                 <div>
-                    <button class="ml-20 p-2 bg-slate-500 rounded-md text-center">
-                        Baixar curriculo
+                    <button class="p-2 bg-slate-500 rounded-md text-center">
+                        Baixar currículo
                     </button>
                 </div>
-                
-                <div class="mr-20 flex space-x-4">
-
+                <div class="flex space-x-4">
                     <button class="p-2 px-9 bg-green-500 rounded-md">
                         Sobre
                     </button>
-
                     <button class="p-2 bg-green-600 rounded-md">
                         Projetos
                     </button>
-
                     <button class="p-2 bg-green-700 rounded-md">
                         Contato
                     </button>
                 </div>
             </div>
-            
+
             <div class="w-full h-50 bg-gray-200 flex">
                 <div class="w-1/2 flex items-center justify-center bg-blue-300 p-4">
-                    <p>Olá! Meu nome é Artur!</p>
+                    <div  class="text-6xl">
+                        <p>Olá! Meu nome é Artur e sou programador web situado em Araçatuba-SP.</p>
+                    </div>
                 </div>
                 <div class="w-1/2 flex items-center justify-center bg-green-300 p-4">
-                    <img src="URL_DA_IMAGEM" alt="Imagem" class="max-w-full h-auto"/>
+                    <img src="./assets/img/img_codeboy.jpg" alt="Imagem" class="w-full h-full object-cover"/>
+                </div>
+            </div>
+
+            <!--Aba sobre mim-->
+            <div class="w-full py-6 flex justify-between items-center">
+                <div class="w-1/2 flex items-center justify-center bg-green-300 p-4">
+                    <img src="./assets/img/img_sobre.jpg" alt="Imagem" class="w-full h-full object-cover"/>
+                </div>
+                <div class="w-1/2 flex items-center justify-center bg-blue-300 p-4">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-8">Sobre mim</h2>
+                        <p class="font-medium">Sou programador (em constante evolução) apaixonado por tecnologia e
+                        desenvolvimento de software. Atualmente, curso Análise e Desenvolvimento de Sistemas, 
+                        onde aprendo a dominar diversas linguagens de programação, como PHP, JavaScript e C#. 
+                        Tenho experiência em projetos pessoais que me permitiram aprimorar minhas habilidades técnicas
+                        e de resolução de problemas. Estou entusiasmado para iniciar minha carreira profissional 
+                        e contribuir com minha dedicação e criatividade para o sucesso de projetos inovadores. 
+                        <p class="font-medium">
+                            Estou em busca de oportunidades que me permitam crescer e aprender continuamente no mundo da programação.
+                        </p>
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Aba Habilidades-->
+            <div class="flex flex-col items-center justify-center bg-gray-100">
+                <div>
+                    <h1 class="text-2xl font-bold mb-8">Minhas Habilidades!</h1>
+                    <div>
+
+                    </div>
                 </div>
             </div>
             
+            <!--Aba projetos-->
+            <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+                <div>
+                    <h1 class="text-2xl font-bold mb-8">Projetos</h1>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <a href="#!">
+                            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                                <img
+                                class="rounded-t-md"
+                                src="./assets/img/img_projetcs.jpg"
+                                alt="Imagem do projeto" />
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <p class="text-base text-black">
+                                Some quick example text to build on the card title and make up the
+                                bulk of the card's content.
+                            </p>
+                        </div>
+                    </div>
+
+                <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                    <a href="#!">
+                        <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                            <img
+                            class="rounded-t-md"
+                            src="./assets/img/img_projetcs.jpg"
+                            alt="Imagem do projeto" />
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <p class="text-base text-black">
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                    <a href="#!">
+                        <div class="relative overflow-hidden bg-cover bg-no-repeat ">
+                            <img
+                            class="rounded-t-md"
+                            src="./assets/img/img_projetcs.jpg"
+                            alt="Imagem do projeto" />
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <p class="text-base text-black">
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+                <div class="mt-12">
+                    <button class="p-2 bg-gray-500 rounded-md transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <a href="https://github.com/ar7utz" target="_blank">
+                            <h3>Ver mais projetos ➞</h3>
+                        </a>
+                    </button>
+
+                </div>
+            </div>  
+
+            <!--Aba redes sociais-->
+            <div class="flex flex-col items-center justify-center min-h-5 bg-gray-100">
+                <div>
+                    <h1 class="text-2xl font-bold mb-8 text-center">Redes Sociais</h1>
+
+                    <div class="flex items-center justify-center">
+                        <a href="https://github.com/ar7utz" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                    
+                    <div class="flex flex-col items-center justify-center min-h-5 bg-gray-100">
+                        <h2>Contato</h2>
+                        <p>Email: pereira.artur@hotmail.com</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer class="text-center min-h-5">
+                <h3>CopyRight Reserved 2024</h3>
+            </footer>
         </main>
-            
     </div>
-    
 </body>
 </html>
