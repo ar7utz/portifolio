@@ -8,50 +8,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="./assets/css/output.css">
     <title>Portifólio</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-white">
     <div class="container mx-auto px-4">
         <main>
-            <div class="w-full h-50 py-6 flex justify-between items-center">
+            <div id="home" class="w-full h-50 py-6 flex justify-between items-center">
                 <div>
-                    <button class="p-2 bg-slate-500 rounded-md text-center">
-                        Baixar currículo
+                    <button class="p-2 bg-slate-500 rounded-md text-center transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <a href="./assets/Currículo Artur.pdf" download="Curriulo-Artur.pdf">Baixar currículo</a>
                     </button>
                 </div>
                 <div class="flex space-x-4">
                     <button class="p-2 px-9 bg-green-500 rounded-md">
-                        Sobre
+                        <a href="#sobre">
+                            Sobre
+                        </a>
+                        
                     </button>
-                    <button class="p-2 bg-green-600 rounded-md">
-                        Projetos
+                    <button class="p-2 px-9 bg-green-600 rounded-md">
+                        <a href="#projetos">
+                            Projetos
+                        </a>
                     </button>
-                    <button class="p-2 bg-green-700 rounded-md">
-                        Contato
+                    <button class="p-2 px-9 bg-green-700 rounded-md">
+                        <a href="#contato">
+                            Contato
+                        </a>
                     </button>
                 </div>
             </div>
 
-            <div class="w-full h-50 bg-gray-200 flex">
-                <div class="w-1/2 flex items-center justify-center bg-blue-300 p-4">
+            <div class="w-full h-50  flex">
+                <div class="w-1/2 flex items-center justify-center  p-4">
                     <div  class="text-6xl">
                         <p>Olá! Meu nome é Artur e sou programador web situado em Araçatuba-SP.</p>
                     </div>
                 </div>
-                <div class="w-1/2 flex items-center justify-center bg-green-300 p-4">
+                <div class="w-1/2 flex items-center justify-center  p-4">
                     <img src="./assets/img/img_codeboy.jpg" alt="Imagem" class="w-full h-full object-cover"/>
                 </div>
             </div>
 
             <!--Aba sobre mim-->
-            <div class="w-full py-6 flex justify-between items-center">
-                <div class="w-1/2 flex items-center justify-center bg-green-300 p-4">
+            <div id="sobre" class="w-full py-6 flex justify-between items-center">
+                <div class="w-1/2 flex items-center justify-center  p-4">
                     <img src="./assets/img/img_sobre.jpg" alt="Imagem" class="w-full h-full object-cover"/>
                 </div>
-                <div class="w-1/2 flex items-center justify-center bg-blue-300 p-4">
+                <div class="w-1/2 flex items-center justify-center  p-4">
                     <div>
                         <h2 class="text-2xl font-bold mb-8">Sobre mim</h2>
                         <p class="font-medium">Sou programador (em constante evolução) apaixonado por tecnologia e
@@ -67,72 +80,75 @@
                     </div>
                 </div>
             </div>
-
-            <!--Aba Habilidades-->
-            <div class="flex flex-col items-center justify-center bg-gray-100">
-                <div>
-                    <h1 class="text-2xl font-bold mb-8">Minhas Habilidades!</h1>
-                    <div>
-
-                    </div>
-                </div>
-            </div>
             
             <!--Aba projetos-->
-            <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+            <div id="projetos" class="flex flex-col items-center justify-center min-h-screen">
                 <div>
                     <h1 class="text-2xl font-bold mb-8">Projetos</h1>
                 </div>
                 <div class="flex space-x-4">
                     <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
-                        <a href="#!">
+                        <a href="https://github.com/ar7utz/Gerenciador_financas" target="_blank">
                             <div class="relative overflow-hidden bg-cover bg-no-repeat">
                                 <img
                                 class="rounded-t-md"
                                 src="./assets/img/img_projetcs.jpg"
                                 alt="Imagem do projeto" />
                             </div>
+                            <div class="p-6">
+                                <p class="text-base text-black font-bold">
+                                    Gerenciador de Finanças!
+                                </p>
+                            </div>
                         </a>
-                        <div class="p-6">
-                            <p class="text-base text-black">
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
-                            </p>
-                        </div>
                     </div>
 
                 <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
-                    <a href="#!">
+                    <a href="https://cardapio-nu-pied.vercel.app/" target="_blank">
                         <div class="relative overflow-hidden bg-cover bg-no-repeat">
                             <img
                             class="rounded-t-md"
                             src="./assets/img/img_projetcs.jpg"
                             alt="Imagem do projeto" />
                         </div>
+                        <div class="p-6">
+                            <p class="text-base text-black font-bold">
+                                Projeto de cardápio digital!
+                            </p>
+                        </div>
                     </a>
-                    <div class="p-6">
-                        <p class="text-base text-black">
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
-                        </p>
-                    </div>
                 </div>
                 
                 <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
-                    <a href="#!">
+                    <a href="https://geradordesenhaaleatorio.vercel.app/" target="_blank">
                         <div class="relative overflow-hidden bg-cover bg-no-repeat ">
                             <img
                             class="rounded-t-md"
                             src="./assets/img/img_projetcs.jpg"
                             alt="Imagem do projeto" />
                         </div>
+                        <div class="p-6">
+                            <p class="text-base text-black font-bold">
+                                Gerador de senha aleatório!
+                            </p>
+                        </div>
                     </a>
-                    <div class="p-6">
-                        <p class="text-base text-black">
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
-                        </p>
-                    </div>
+                </div>
+
+                <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                    <a href="https://relogio-digital-snowy.vercel.app/" target="_blank">
+                        <div class="relative overflow-hidden bg-cover bg-no-repeat ">
+                            <img
+                            class="rounded-t-md"
+                            src="./assets/img/img_projetcs.jpg"
+                            alt="Imagem do projeto" />
+                        </div>
+                        <div class="p-6">
+                            <p class="text-base text-black font-bold">
+                                Relógio digital automático!
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
                 <div class="mt-12">
@@ -146,16 +162,16 @@
             </div>  
 
             <!--Aba redes sociais-->
-            <div class="flex flex-col items-center justify-center min-h-5 bg-gray-100">
+            <div id="contato" class="flex flex-col items-center justify-center">
                 <div>
                     <h1 class="text-2xl font-bold mb-8 text-center">Redes Sociais</h1>
 
-                    <div class="flex items-center justify-center">
-                        <a href="https://github.com/ar7utz" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href=""><i class="fa fa-linkedin"></i></a>
+                    <div class="flex items-center justify-center mb-8 py-4">
+                        <a href="https://github.com/ar7utz" target="_blank"><i class="fa fa-github p-4" style="font-size:50px"></i></a>
+                        <a href="https://www.linkedin.com/in/artur-pereira-1b7071220/" target="_blank"><i class="fa fa-linkedin" style="font-size:50px"></i></a>
                     </div>
                     
-                    <div class="flex flex-col items-center justify-center min-h-5 bg-gray-100">
+                    <div class="flex flex-col items-center justify-center min-h-5">
                         <h2>Contato</h2>
                         <p>Email: pereira.artur@hotmail.com</p>
                     </div>
@@ -163,10 +179,22 @@
                 </div>
             </div>
 
-            <footer class="text-center min-h-5">
-                <h3>CopyRight Reserved 2024</h3>
+            <footer class="text-center min-h-5 mt-8">
+                <h3>Copyright Reserved 2024 - Design by: Freepik</h3>
             </footer>
         </main>
     </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
