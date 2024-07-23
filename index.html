@@ -22,49 +22,50 @@
 <body class="bg-white">
     <div class="container mx-auto px-4">
         <main>
-            <div id="home" class="w-full h-50 py-6 flex justify-between items-center">
-                <div>
-                    <button class="p-2 rounded-md text-center transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40 border-solid border-2 border-black">
-                        <a href="./assets/Currículo Artur.pdf" download="Curriulo-Artur.pdf">Baixar currículo</a>
+            <div id="home" class="w-full py-6 flex flex-col sm:flex-row justify-between items-center">
+                <div class="mb-4 sm:mb-0">
+                    <button class="p-2 rounded-md text-center transition duration-500 ease-in-out hover:shadow-lg hover:bg-green-500 dark:hover:shadow-black/40 border-solid border-2 border-black">
+                        <a href="./assets/Currículo Artur.pdf" download="Currículo-Artur.pdf">Baixar currículo</a>
                     </button>
                 </div>
                 <div class="flex space-x-4">
-                    <button class="p-2 px-9 bg-green-500 rounded-md transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40 border-solid border-2 border-black">
-                        <a href="#sobre">
+                    <a href="#sobre" class="text-black">
+                        <button class="p-2 px-9 bg-white rounded-md transition duration-500 ease-in-out hover:shadow-lg hover:bg-green-500 dark:hover:shadow-black/40 border-solid border-2 border-black">
                             Sobre
-                        </a>
-                        
-                    </button>
-                    <button class="p-2 px-9 bg-green-600 rounded-md transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40 border-solid border-2 border-black">
-                        <a href="#projetos">
+                        </button>
+                    </a>
+
+                    <a href="#projetos" class="text-black">
+                        <button class="p-2 px-9 bg-white rounded-md transition duration-500 ease-in-out hover:shadow-lg hover:bg-green-500 dark:hover:shadow-black/40 border-solid border-2 border-black">
                             Projetos
-                        </a>
-                    </button>
-                    <button class="p-2 px-9 bg-green-700 rounded-md transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40 border-solid border-2 border-black">
-                        <a href="#contato">
+                        </button>
+                    </a>
+
+                    <a href="#contato" class="text-black">
+                        <button class="p-2 px-9 bg-white rounded-md transition duration-500 ease-in-out hover:shadow-lg hover:bg-green-500 dark:hover:shadow-black/40 border-solid border-2 border-black">
                             Contato
-                        </a>
-                    </button>
+                        </button>
+                    </a>
                 </div>
             </div>
 
-            <div class="w-full h-50  flex">
-                <div class="w-1/2 flex items-center justify-center  p-4">
-                    <div  class="text-6xl">
+            <div class="w-full flex flex-col sm:flex-row">
+                <div class="w-full sm:w-1/2 flex items-center justify-center p-4">
+                    <div class="text-2xl sm:text-4xl md:text-6xl">
                         <p>Olá! Meu nome é Artur e sou programador web situado em Araçatuba-SP.</p>
                     </div>
                 </div>
-                <div class="w-1/2 flex items-center justify-center  p-4">
-                    <img src="./assets/img/img_codeboy.jpg" alt="Imagem" class="w-full h-full object-cover"/>
+                <div class="w-full sm:w-1/2 flex items-center justify-center p-4">
+                    <img src="./assets/img/img_codeboy.jpg" alt="Imagem" class="w-full h-full object-cover rounded-md"/>
                 </div>
             </div>
 
             <!--Aba sobre mim-->
-            <div id="sobre" class="w-full py-6 flex justify-between items-center">
-                <div class="w-1/2 flex items-center justify-center  p-4">
-                    <img src="./assets/img/img_sobre.jpg" alt="Imagem" class="w-full h-full object-cover"/>
+            <div id="sobre" class="w-full py-6 flex flex-col sm:flex-row justify-between items-center">
+                <div class="w-full sm:w-1/2 flex items-center justify-center p-4">
+                    <img src="./assets/img/img_sobre.jpg" alt="Imagem" class="w-full h-full object-cover rounded-md"/>
                 </div>
-                <div class="w-1/2 flex items-center justify-center  p-4">
+                <div class="w-full sm:w-1/2 flex items-center justify-center p-4">
                     <div>
                         <h2 class="text-2xl font-bold mb-8">Sobre mim</h2>
                         <p class="font-medium">Sou programador (em constante evolução) apaixonado por tecnologia e
@@ -76,7 +77,6 @@
                         <p class="font-medium">
                             Estou em busca de oportunidades que me permitam crescer e aprender continuamente no mundo da programação.
                         </p>
-                    </p>
                     </div>
                 </div>
             </div>
@@ -86,96 +86,72 @@
                 <div>
                     <h1 class="text-2xl font-bold mb-8">Projetos</h1>
                 </div>
-                <div class="flex space-x-4">
-                    <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-full max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
                         <a href="https://github.com/ar7utz/Gerenciador_financas" target="_blank">
                             <div class="relative overflow-hidden bg-cover bg-no-repeat">
-                                <img
-                                class="rounded-t-md"
-                                src="./assets/img/img_projetcs.jpg"
-                                alt="Imagem do projeto" />
+                                <img class="rounded-t-md" src="./assets/img/img_projetcs.jpg" alt="Imagem do projeto" />
                             </div>
                             <div class="p-6">
-                                <p class="text-base text-black font-bold">
-                                    Gerenciador de Finanças!
-                                </p>
+                                <p class="text-base text-black font-bold">Gerenciador de Finanças!</p>
                             </div>
                         </a>
                     </div>
 
-                <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
-                    <a href="https://cardapio-nu-pied.vercel.app/" target="_blank">
-                        <div class="relative overflow-hidden bg-cover bg-no-repeat">
-                            <img
-                            class="rounded-t-md"
-                            src="./assets/img/img_projetcs.jpg"
-                            alt="Imagem do projeto" />
-                        </div>
-                        <div class="p-6">
-                            <p class="text-base text-black font-bold">
-                                Projeto de cardápio digital!
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
-                    <a href="https://geradordesenhaaleatorio.vercel.app/" target="_blank">
-                        <div class="relative overflow-hidden bg-cover bg-no-repeat ">
-                            <img
-                            class="rounded-t-md"
-                            src="./assets/img/img_projetcs.jpg"
-                            alt="Imagem do projeto" />
-                        </div>
-                        <div class="p-6">
-                            <p class="text-base text-black font-bold">
-                                Gerador de senha aleatório!
-                            </p>
-                        </div>
-                    </a>
-                </div>
+                    <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-full max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <a href="https://cardapio-nu-pied.vercel.app/" target="_blank">
+                            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                                <img class="rounded-t-md" src="./assets/img/img_projetcs.jpg" alt="Imagem do projeto" />
+                            </div>
+                            <div class="p-6">
+                                <p class="text-base text-black font-bold">Projeto de cardápio digital!</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-full max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <a href="https://geradordesenhaaleatorio.vercel.app/" target="_blank">
+                            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                                <img class="rounded-t-md" src="./assets/img/img_projetcs.jpg" alt="Imagem do projeto" />
+                            </div>
+                            <div class="p-6">
+                                <p class="text-base text-black font-bold">Gerador de senha aleatório!</p>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-64 max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
-                    <a href="https://relogio-digital-snowy.vercel.app/" target="_blank">
-                        <div class="relative overflow-hidden bg-cover bg-no-repeat ">
-                            <img
-                            class="rounded-t-md"
-                            src="./assets/img/img_projetcs.jpg"
-                            alt="Imagem do projeto" />
-                        </div>
-                        <div class="p-6">
-                            <p class="text-base text-black font-bold">
-                                Relógio digital automático!
-                            </p>
-                        </div>
-                    </a>
+                    <div class="block rounded-md bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white w-full max-w-xs transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <a href="https://relogio-digital-snowy.vercel.app/" target="_blank">
+                            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                                <img class="rounded-t-md" src="./assets/img/img_projetcs.jpg" alt="Imagem do projeto" />
+                            </div>
+                            <div class="p-6">
+                                <p class="text-base text-black font-bold">Relógio digital automático!</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
                 <div class="mt-12">
-                    <button class="p-2 bg-gray-500 rounded-md transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                    <button class="p-2 bg-white border-solid border-2 border-black rounded-md transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40 hover:bg-green-500">
                         <a href="https://github.com/ar7utz" target="_blank">
                             <h3>Ver mais projetos ➞</h3>
                         </a>
                     </button>
-
                 </div>
             </div>  
 
             <!--Aba redes sociais-->
-            <div id="contato" class="flex flex-col items-center justify-center">
+            <div id="contato" class="flex flex-col items-center justify-center mt-12 min-h-screen">
                 <div>
                     <h1 class="text-2xl font-bold mb-8 text-center">Redes Sociais</h1>
-
-                    <div class="flex items-center justify-center mb-8 py-4">
+                    <div class="flex items-center justify-center mb-8 py-4 space-x-4">
                         <a href="https://github.com/ar7utz" target="_blank"><i class="fa fa-github p-4" style="font-size:50px"></i></a>
                         <a href="https://www.linkedin.com/in/artur-pereira-1b7071220/" target="_blank"><i class="fa fa-linkedin" style="font-size:50px"></i></a>
                     </div>
-                    
                     <div class="flex flex-col items-center justify-center min-h-5">
                         <h2>Contato</h2>
                         <p>Email: pereira.artur@hotmail.com</p>
                     </div>
-
                 </div>
             </div>
 
@@ -185,6 +161,10 @@
         </main>
     </div>
 
+    <button id="scrollToTopBtn" class="fixed bottom-4 right-4 p-4 bg-green-500 text-black rounded-full shadow-lg transition duration-500 ease-in-out hover:bg-white hover:border-solid hover:border-2 hover:border-black">
+        ↑
+    </button>
+
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -193,6 +173,13 @@
                     behavior: 'smooth',
                     block: 'start'
                 });
+            });
+        });
+
+        document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
     </script>
