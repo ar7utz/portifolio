@@ -24,9 +24,9 @@
 <body class="bg-white">
     <div class="container mx-auto px-4">
         <main>
-            <!--Ícone responsivo-->
+            <!-- Ícone responsivo -->
             <div class="sm:hidden flex items-center">
-                <button id="hamburger" class="text-black">
+                <button id="icone" class="text-black">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h7"></path>
                     </svg>
@@ -61,10 +61,18 @@
                 </div>
             
                 <!-- Menu para dispositivos móveis -->
-                <div id="menu" class="hidden fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 text-white">
-                    <a href="#sobre" class="text-xl">Sobre</a>
-                    <a href="#projetos" class="text-xl">Projetos</a>
-                    <a href="#contato" class="text-xl">Contato</a>
+                <div id="menu" class="hidden fixed inset-0 bg-slate-500 flex flex-col items-center justify-center space-y-6 text-white">
+                    <!-- Ícone dentro do menu para poder fechar -->
+                        <button id="closeIcone" class="text-black absolute top-4 left-8">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h7"></path>
+                            </svg>
+                        </button>
+                
+                    <!-- Links do menu -->
+                    <a href="#sobre" class="text-xl menu-item">Sobre</a>
+                    <a href="#projetos" class="text-xl menu-item">Projetos</a>
+                    <a href="#contato" class="text-xl menu-item">Contato</a>
                 </div>
             </div>
             
@@ -207,12 +215,26 @@
         });
     </script>
 
-    <script> //menu responsivo
-        const hamburger = document.getElementById("hamburger");
+    <script>
+        const icone = document.getElementById("icone");
+        const closeIcone = document.getElementById("closeIcone");
         const menu = document.getElementById("menu");
 
-        hamburger.addEventListener("click", () => {
+        // Alterna a visibilidade do menu ao clicar no ícone
+        icone.addEventListener("click", () => {
             menu.classList.toggle("hidden");
+        });
+
+        // Fecha o menu ao clicar no ícone dentro do menu
+        closeIcone.addEventListener("click", () => {
+        menu.classList.add("hidden");
+        });
+
+        // Fecha o menu ao clicar em um item
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                menu.classList.add("hidden");
+            });
         });
     </script>
 
