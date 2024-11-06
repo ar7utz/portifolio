@@ -31,10 +31,13 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h7"></path>
                     </svg>
                 </button>
+                <div>
+                    <p>Artur - Web Dev</p>
+                </div>
             </div>
 
             <div id="home" class="mt-2 md:flex md:flex-row md:items-center md:justify-between lg:relative lg:flex lg:flex-row lg:items-center lg:justify-between">
-                <div class="hidden md:flex md:justify-start lg:mr-auto">
+                <div class="hidden md:flex md:justify-start lg:mr-auto ">
                     <button class="p-2 rounded-md text-center transition duration-500 ease-in-out hover:shadow-lg hover:bg-green-500 dark:hover:shadow-black/40 border-solid border-2 border-black">
                         <a href="./assets/Currículo Artur.pdf" download="Currículo-Artur.pdf">Baixar currículo</a>
                     </button>
@@ -77,31 +80,38 @@
             </div>
             
 
-            <div class="w-full flex flex-col sm:flex-row">
-                <div class="w-full sm:w-1/2 flex items-center justify-center p-4">
-                    <div class="text-2xl sm:text-4xl md:text-6xl">
+            <div class="min-h-screen md:items-stretch lg:items-center flex flex-col text-2xl justify-center md:w-full md:flex md:flex-row">
+                <div class="w-full flex items-center justify-center p-4">
+                    <div class="text-4xl md:text-6xl">
                         <p>Olá! Meu nome é Artur e sou programador web situado em Araçatuba-SP.</p>
                     </div>
                 </div>
-                <div class="w-full sm:w-1/2 flex items-center justify-center p-4">
+
+                <div class="w-full md:items-center md:justify-center">
                     <img src="./assets/img/img_codeboy.jpg" alt="Imagem" class="w-full h-full object-cover rounded-md"/>
                 </div>
+                
             </div>
 
             <!--Aba sobre mim-->
-            <div id="sobre" class="w-full py-6 flex flex-col sm:flex-row justify-between items-center">
-                <div class="w-full sm:w-1/2 flex items-center justify-center p-4">
+            <div id="sobre" class="min-h-screen w-full py-6 flex flex-col md:flex-row justify-between items-center">
+                <div class="hidden md:w-full md:flex md:items-center md:justify-center md:p-4 lg:w-full lg:flex lg:items-center lg:justify-center lg:p-4">
                     <img src="./assets/img/img_sobre.jpg" alt="Imagem" class="w-full h-full object-cover rounded-md"/>
                 </div>
-                <div class="w-full sm:w-1/2 flex items-center justify-center p-4">
+                <div class="w-full flex items-center justify-center p-4">
                     <div>
                         <h2 class="text-2xl font-bold mb-8">Sobre mim</h2>
                         <p class="font-medium">Sou programador (em constante evolução) apaixonado por tecnologia e
                         desenvolvimento de software. Atualmente, curso Análise e Desenvolvimento de Sistemas, 
-                        onde aprendo a dominar diversas linguagens de programação, como PHP, JavaScript e C#. 
-                        Tenho experiência em projetos pessoais que me permitiram aprimorar minhas habilidades técnicas
+                        onde aprendo a dominar diversas linguagens de programação, como PHP, JavaScript e C#.
+                        </p>
+                            <div class="w-full flex items-center justify-center p-4 md:hidden lg:hidden">
+                                <img src="./assets/img/img_sobre.jpg" alt="Imagem" class="w-full h-full object-cover rounded-md"/>
+                            </div>
+                        <p class="font-medium">Tenho experiência em projetos pessoais que me permitiram aprimorar minhas habilidades técnicas
                         e de resolução de problemas. Estou entusiasmado para iniciar minha carreira profissional 
-                        e contribuir com minha dedicação e criatividade para o sucesso de projetos inovadores. 
+                        e contribuir com minha dedicação e criatividade para o sucesso de projetos inovadores.
+                        </p> 
                         <p class="font-medium">
                             Estou em busca de oportunidades que me permitam crescer e aprender continuamente no mundo da programação.
                         </p>
