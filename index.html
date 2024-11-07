@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="w-full md:items-center md:justify-center reveal-left">
-                    <img src="./assets/img/img_codeboy.jpg" alt="Imagem" class="w-full h-full object-cover rounded-md"/>
+                    <img src="./assets/img/img_codeboy.jpg" alt="Imagem" class="w-full h-full lg:h-4/5 object-cover rounded-md"/>
                 </div>
                 
             </div>
@@ -175,10 +175,23 @@
                         </a>
                     </button>
                 </div>
-            </div>  
+            </div>
+
+            <!--Aba tecnologias que uso-->
+            <div class="min-h-screen w-full">
+                <div class="flex flex-row text-center items-center justify-center">
+                    <h1>Linguagens e tecnologias</h1>
+                </div>
+
+                <!--Linguagens-->
+                <div class="">
+
+                </div>
+
+            </div>
 
             <!--Aba redes sociais-->
-            <div id="contato" class="flex flex-col items-center justify-center mt-12 min-h-screen reveal-top">
+            <div id="contato" class="flex flex-col items-center justify-center min-h-screen reveal-right">
                 <div>
                     <h1 class="text-2xl font-bold mb-8 text-center">Redes Sociais</h1>
                     <div class="flex items-center justify-center mb-8 py-4 space-x-4">
@@ -206,11 +219,11 @@
     <!-- Scripts -->
     <script> // Configuração do ScrollReveal para animações 
         ScrollReveal().reveal('.reveal', {
-            duration: 7000,       // Duração da animação
-            origin: 'bottom',     // Origem da animação (de baixo para cima)
-            distance: '80px',     // Distância do movimento
-            easing: 'ease-in-out',// Suavização da animação
-            reset: false          // Anima uma vez; true se quiser repetir ao rolar
+            duration: 1200,
+            origin: 'bottom',
+            distance: '20px',
+            easing: 'ease-in-out',
+            reset: false
         });
 
         ScrollReveal().reveal('#home, #sobre, #projetos, #contato, footer', { interval: 500 });
@@ -219,31 +232,21 @@
 
     <script> // Configuração para os elementos surgirem da esquerda
         ScrollReveal().reveal('.reveal-left', {
-            duration: 1200,      // Duração da animação
-            origin: 'left',      // Animação vem da esquerda
-            distance: '100px',   // Distância de movimento
-            easing: 'ease-in-out', // Suavização da animação
-            reset: false         // Reanimação ao rolar; defina como 'true' se desejar
+            duration: 1200,
+            origin: 'left',
+            distance: '20px',
+            easing: 'ease-in-out',
+            reset: false
         });
     </script>
 
     <script> // Configuração para os elementos surgirem da direita
         ScrollReveal().reveal('.reveal-right', {
-            duration: 1200,      // Duração da animação
-            origin: 'right',      // Animação vem da esquerda
-            distance: '100px',   // Distância de movimento
-            easing: 'ease-in-out', // Suavização da animação
-            reset: false         // Reanimação ao rolar; defina como 'true' se desejar
-        });
-    </script>
-
-    <script> // Configuração para os elementos surgirem da direita
-        ScrollReveal().reveal('.reveal-top', {
-            duration: 1200,      // Duração da animação
-            origin: 'top',      // Animação vem da esquerda
-            distance: '100px',   // Distância de movimento
-            easing: 'ease-in-out', // Suavização da animação
-            reset: false         // Reanimação ao rolar; defina como 'true' se desejar
+            duration: 1200,
+            origin: 'right',
+            distance: '20px',
+            easing: 'ease-in-out',
+            reset: false
         });
     </script>
 
