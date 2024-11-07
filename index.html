@@ -18,19 +18,22 @@
         html{
             scroll-behavior: smooth;
         }
+        .menu {
+        transition: transform 0.5s ease;
+        }
     </style>
 </head>
 <body class="bg-white">
     <div class="container mx-auto px-4">
         <main>
             <!-- Ícone responsivo -->
-            <div class="sm:hidden flex items-center">
+            <div class="sm:hidden flex items-center mt-8 text-xl">
                 <button id="icone" class="text-black">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h7"></path>
                     </svg>
                 </button>
-                <div>
+                <div class="flex text-center">
                     <p>Artur - Web Dev</p>
                 </div>
             </div>
@@ -63,21 +66,32 @@
                 </div>
             
                 <!-- Menu para dispositivos móveis -->
-                <div id="menu" class="hidden fixed inset-0 bg-slate-500 flex flex-col items-center justify-center space-y-6 text-white">
-                    <!-- Ícone dentro do menu para poder fechar -->
-                        <button id="closeIcone" class="text-black absolute top-4 left-8">
+                <div id="menu" class="hidden z-50 fixed inset-0 bg-gray-300 h-1/4 flex flex-col items-start space-y-6 text-white transition-all duration-500 transform -translate-x-full">
+                    <div class="sm:hidden flex items-center mt-8 ml-4">
+                        <button id="closeIcone" class="text-black">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h7"></path>
                             </svg>
                         </button>
-                
-                    <!-- Links do menu -->
-                    <a href="#sobre" class="text-xl menu-item">Sobre</a>
-                    <a href="#projetos" class="text-xl menu-item">Projetos</a>
-                    <a href="#contato" class="text-xl menu-item">Contato</a>
+                        <div class="flex text-center text-xl text-black">
+                            <p>Artur - Web Dev</p>
+                        </div>
+                    </div>
+
+                    <!--Links do menu-->
+                    <div class="flex flex-col ml-10 text-black">
+                        <div class="mb-2">
+                            <a href="#sobre" class="text-xl menu-item">Sobre</a>
+                        </div>
+                        <div class="mb-2">
+                            <a href="#projetos" class="text-xl menu-item">Projetos</a>
+                        </div>
+                        <div class="mb-2">
+                            <a href="#contato" class="text-xl menu-item">Contato</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
 
             <div class="min-h-screen md:items-stretch lg:items-center flex flex-col text-2xl justify-center md:w-full md:flex md:flex-col lg:flex lg:flex-row">
                 <div class="w-full flex items-center justify-center p-4 reveal-left">
@@ -89,7 +103,7 @@
                 <div class="w-full md:items-center lg:items-center md:justify-center reveal-left lg:max-h-[60vh]">
                     <img src="./assets/img/img_codeboy1.JPG" alt="Imagem" class="w-full h-full md:object-contain object-cover rounded-md"/>
                 </div>
-                
+
             </div>
 
             <!--Aba sobre mim-->
@@ -119,44 +133,259 @@
             </div>
 
             <!--Aba tecnologias que uso-->
-            <div class="min-h-screen w-full">
-                <div class="flex flex-row text-center items-center justify-center">
-                    <h1>Linguagens e tecnologias</h1>
+            <div class="min-h-screen w-11/12 mx-auto flex flex-col items-center justify-center mb-28">
+                <div class="mb-8">
+                    <h1 class="text-center font-bold text-3xl">Linguagens e Tecnologias</h1>
+                    <p>
+                        Linguagens que eu estudo e desenvolvo meus projetos
+                    </p>
                 </div>
-                <div class="grid grid-rows-4 grid-flow-col gap-4">
-                    <div class="max-w-sm p-4 bg-white rounded-lg shadow-md">
-                        <div class="flex items-center space-x-4">
-                          <div class="w-12 h-12 overflow-hidden rounded-full">
-                            <img src="./assets/svg/java-svgrepo-com (1).svg" alt="" class="object-cover">
-                          </div>
-                          <div>
-                            <p class="text-gray-700 text-sm font-semibold">Jonathan Reinink</p>
-                            <p class="text-gray-500 text-xs">Aug 18</p>
-                          </div>
+                <div class="grid grid-cols-1 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 gap-4 reveal-left">
+                    <!--card 1-->
+                    <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                    transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                            <img src="./assets/svg/html-5-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5">
                         </div>
-                      
-                        <div class="mt-4">
-                          <p class="text-xs text-gray-400">🔒 Members only</p>
-                          <h2 class="mt-2 text-lg font-semibold text-gray-900">Can coffee make you a better developer?</h2>
-                          <p class="mt-2 text-gray-700 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+                        
+                        <div class="p-4 lg:w-3/5">
+                            <div>
+                                <h2 class="mt-2 text-lg font-semibold text-gray-900">HTML</h2>
+                                <p class="flex flex-col h-full">HTML é uma linguagem de marcação que usa tags para estruturar 
+                                    conteúdo na web, permitindo criar páginas com textos, imagens, links e outros elementos que os 
+                                    navegadores podem interpretar e exibir.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="max-w-sm p-4 bg-white rounded-lg shadow-md">
-                        <div class="flex items-center space-x-4">
-                          <div class="w-12 h-12 overflow-hidden rounded-full">
-                            <img src="./assets/svg/java-svgrepo-com (1).svg" alt="" class="object-cover">
-                          </div>
-                          <div>
-                            <p class="text-gray-700 text-sm font-semibold">Jonathan Reinink</p>
-                            <p class="text-gray-500 text-xs">Aug 18</p>
-                          </div>
+                    <!--card 2-->
+                    <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                    transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                            <img src="./assets/svg/css-3-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
                         </div>
-                      
-                        <div class="mt-4">
-                          <p class="text-xs text-gray-400">🔒 Members only</p>
-                          <h2 class="mt-2 text-lg font-semibold text-gray-900">Can coffee make you a better developer?</h2>
-                          <p class="mt-2 text-gray-700 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+                        
+                        <div class="p-4 lg:w-3/5">
+                            <div>
+                                <h2 class="mt-2 text-lg font-semibold text-gray-900">CSS</h2>
+                                <p class="flex flex-col h-full">CSS é uma linguagem de estilização que controla a aparência 
+                                    visual de páginas web, definindo cores, layouts, fontes e outros aspectos de design dos elementos HTML.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card 3-->
+                    <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                    transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                            <img src="./assets/svg/javascript-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
+                        </div>
+                        
+                        <div class="p-4 lg:w-3/5">
+                            <div>
+                                <h2 class="mt-2 text-lg font-semibold text-gray-900">JavaScript</h2>
+                                <p class="flex flex-col h-full">JavaScript é uma linguagem de programação que adiciona 
+                                    interatividade e dinamismo às páginas web, permitindo manipular elementos, responder a 
+                                    eventos do usuário e atualizar conteúdo em tempo real.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card 4-->
+                    <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                    transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                            <img src="./assets/svg/php-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
+                        </div>
+                        
+                        <div class="p-4 lg:w-3/5">
+                            <div>
+                                <h2 class="mt-2 text-lg font-semibold text-gray-900">PHP</h2>
+                                <p class="flex flex-col h-full">PHP é uma linguagem de programação voltada para desenvolvimento 
+                                    web do lado do servidor, que permite criar páginas dinâmicas e interagir com bancos de dados.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card 5-->
+                    <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                    transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                            <img src="./assets/svg/sql-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
+                        </div>
+                        
+                        <div class="p-4 lg:w-3/5">
+                            <div>
+                                <h2 class="mt-2 text-lg font-semibold text-gray-900">SQL</h2>
+                                <p class="flex flex-col h-full">SQL é uma linguagem para gerenciar e manipular bancos de dados 
+                                    relacionais, permitindo criar, consultar, atualizar e excluir dados de forma estruturada.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card 6-->
+                    <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                    transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                            <img src="./assets/svg/tailwind-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
+                        </div>
+                        
+                        <div class="p-4 lg:w-3/5">
+                            <div>
+                                <h2 class="mt-2 text-lg font-semibold text-gray-900">Tailwind</h2>
+                                <p class="flex flex-col h-full">Tailwind é um framework CSS que utiliza classes 
+                                    utilitárias pré-definidas para estilizar elementos HTML diretamente no markup, 
+                                    permitindo um desenvolvimento mais rápido e consistente sem escrever CSS personalizado.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card 7-->
+                    <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                    transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                            <img src="./assets/svg/csharp-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
+                        </div>
+                        
+                        <div class="p-4 lg:w-3/5">
+                            <div>
+                                <h2 class="mt-2 text-lg font-semibold text-gray-900">C#</h2>
+                                <p class="flex flex-col h-full">C# é uma linguagem de programação orientada a objetos 
+                                    desenvolvida pela Microsoft, usada principalmente para criar aplicações Windows, 
+                                    jogos com Unity e sistemas web usando .NET Framework.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--card 8-->
+                    <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                    transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                        <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                            <img src="./assets/svg/java-svgrepo-com (1).svg" alt="Imagem" class="object-contain h-3/5 ">
+                        </div>
+                        
+                        <div class="p-4 lg:w-3/5">
+                            <div>
+                                <h2 class="mt-2 text-lg font-semibold text-gray-900">Java</h2>
+                                <p class="flex flex-col h-full">Java é uma linguagem de programação orientada a objetos, 
+                                    multiplataforma e amplamente utilizada para desenvolver aplicações empresariais, 
+                                    Android, sistemas web e programas desktop.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 mb-8">
+                    <h1 class="text-center font-bold text-3xl">Ferramentas</h1>
+                    <p>Ferramentas que eu utilizo no dia a dia</p>
+                </div>
+
+                <div class="w-4/5 mx-auto flex flex-col items-center justify-center reveal-right">
+                    <div class="grid grid-cols-1 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 gap-6">
+                        <!--tool 1-->
+                        <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                        transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                            <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                                <img src="./assets/svg/visual-studio-code-svgrepo-com.svg" alt="Imagem" class="object-contain w-full h-auto lg:h-3/5 ">
+                            </div>
+                            
+                            <div class="p-4 lg:w-3/5">
+                                <div>
+                                    <h2 class="mt-2 text-lg font-semibold text-gray-900">Visual Studio Code</h2>
+                                    <p class="mt-2 text-gray-700 text-sm">O Visual Studio Code é um editor de código-fonte 
+                                        gratuito e altamente personalizável, que oferece recursos como realce de sintaxe, depuração, 
+                                        integração com Git e uma vasta biblioteca de extensões para diferentes linguagens de programação.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!--tool 2-->
+                        <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                        transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                            <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                                <img src="./assets/svg/visual-studio-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
+                            </div>
+                            
+                            <div class="p-4 lg:w-3/5">
+                                <div>
+                                    <h2 class="mt-2 text-lg font-semibold text-gray-900">Visual Studio</h2>
+                                    <p class="mt-2 text-gray-700 text-sm">O Visual Studio é um ambiente de desenvolvimento 
+                                        integrado (IDE) robusto da Microsoft, focado principalmente em desenvolvimento .NET, 
+                                        oferecendo ferramentas avançadas para codificação, depuração, teste e implantação de aplicações.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!--tool 3-->
+                        <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                        transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                            <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                                <img src="./assets/svg/git-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
+                            </div>
+                            
+                            <div class="p-4 lg:w-3/5">
+                                <div>
+                                    <h2 class="mt-2 text-lg font-semibold text-gray-900">GIT</h2>
+                                    <p class="mt-2 text-gray-700 text-sm">Git é um sistema de controle de versão que 
+                                        permite rastrear e gerenciar mudanças no código-fonte, facilitando o trabalho colaborativo 
+                                        entre desenvolvedores e o versionamento de projetos.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--tool 4-->
+                        <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                        transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                            <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                                <img src="./assets/svg/Apache_NetBeans_Logo.svg" alt="Imagem" class="object-contain h-3/5 ">
+                            </div>
+                            
+                            <div class="p-4 lg:w-3/5">
+                                <div>
+                                    <h2 class="mt-2 text-lg font-semibold text-gray-900">NetBeans</h2>
+                                    <p class="mt-2 text-gray-700 text-sm">O NetBeans é um ambiente de desenvolvimento integrado (IDE) 
+                                        gratuito e de código aberto que oferece uma plataforma completa para desenvolvedores criarem 
+                                        aplicações em diversas linguagens de programação, como Java, JavaScript, HTML5, PHP, C/C++ e outras.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!--tool 5-->
+                        <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                        transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                            <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                                <img src="./assets/svg/pgsql-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
+                            </div>
+                            
+                            <div class="p-4 lg:w-3/5">
+                                <div>
+                                    <h2 class="mt-2 text-lg font-semibold text-gray-900">PostgreSQL</h2>
+                                    <p class="mt-2 text-gray-700 text-sm">O PostgreSQL é um sistema gerenciador de banco de dados 
+                                        relacional (SGBD) de código aberto, amplamente utilizado e reconhecido por sua robustez, 
+                                        confiabilidade e flexibilidade. Desenvolvido por uma comunidade global, o PostgreSQL oferece 
+                                        um conjunto completo de recursos para o gerenciamento de dados.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!--tool 6-->
+                        <div class="w-full bg-white rounded-lg shadow-md lg:flex
+                        transition duration-500 ease-in-out hover:shadow-lg dark:hover:shadow-black/40">
+                            <div class="w-3/5 flex mx-auto justify-center lg:w-2/5 lg:flex lg:items-center lg:justify-center">
+                                <img src="./assets/svg/phpmyadmin-svgrepo-com.svg" alt="Imagem" class="object-contain h-3/5 ">
+                            </div>
+                            
+                            <div class="p-4 lg:w-3/5">
+                                <div>
+                                    <h2 class="mt-2 text-lg font-semibold text-gray-900">PHPMyAdmin</h2>
+                                    <p class="mt-2 text-gray-700 text-sm">O phpMyAdmin é um aplicativo web gratuito e de código 
+                                        aberto que facilita a administração de bancos de dados MySQL e MariaDB. Através de uma 
+                                        interface intuitiva, você pode realizar diversas tarefas sem a necessidade de escrever 
+                                        comandos SQL complexos.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -252,9 +481,9 @@
         ScrollReveal().reveal('.reveal', {
             duration: 1200,
             origin: 'bottom',
-            distance: '20px',
+            distance: '5px',
             easing: 'ease-in-out',
-            reset: false
+            reset: true
         });
 
         ScrollReveal().reveal('#home, #sobre, #projetos, #contato, footer', { interval: 500 });
@@ -267,7 +496,7 @@
             origin: 'left',
             distance: '20px',
             easing: 'ease-in-out',
-            reset: false
+            reset: true
         });
     </script>
 
@@ -277,7 +506,7 @@
             origin: 'right',
             distance: '20px',
             easing: 'ease-in-out',
-            reset: false
+            reset: true
         });
     </script>
 
@@ -308,19 +537,37 @@
         // Alterna a visibilidade do menu ao clicar no ícone
         icone.addEventListener("click", () => {
             menu.classList.toggle("hidden");
+            menu.classList.remove("-translate-x-full");
+            document.body.classList.add("overflow-hidden");
+
+                ScrollReveal().reveal('.menu-item', {
+                origin: 'left',
+                distance: '20px',
+                delay: 200,
+                interval: 200,
+                duration: 500,
+            });
         });
 
         // Fecha o menu ao clicar no ícone dentro do menu
         closeIcone.addEventListener("click", () => {
         menu.classList.add("hidden");
+        menu.classList.add("-translate-x-full");
+        document.body.classList.remove("overflow-hidden");
+
+        setTimeout(() => menu.classList.add("hidden"), 500);
         });
 
         // Fecha o menu ao clicar em um item
         document.querySelectorAll('.menu-item').forEach(item => {
             item.addEventListener('click', () => {
+                menu.classList.add("-translate-x-full");
                 menu.classList.add("hidden");
+                document.body.classList.remove("overflow-hidden");
+                setTimeout(() => menu.classList.add("hidden"), 500);
             });
         });
+
     </script>
 
 </body>
