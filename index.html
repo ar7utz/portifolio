@@ -27,13 +27,13 @@
     <div class="container mx-auto px-4">
         <main>
             <!-- Ícone responsivo -->
-            <div class="sm:hidden flex items-center mt-8 text-xl">
+            <div class="sm:hidden flex items-center mt-8">
                 <button id="icone" class="text-black">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h7"></path>
                     </svg>
                 </button>
-                <div class="flex text-center">
+                <div class="text-xl ml-2">
                     <p>Artur - Web Dev</p>
                 </div>
             </div>
@@ -44,41 +44,41 @@
                         <a href="./assets/Currículo Artur.pdf" download="Currículo-Artur.pdf">Baixar currículo</a>
                     </button>
                 </div>
-            
+
                 <div class="hidden md:flex lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 md:space-x-4">
                     <a href="#sobre" class="text-black">
                         <button class="p-2 px-9 bg-white rounded-md transition duration-500 ease-in-out hover:shadow-lg hover:bg-verde dark:hover:shadow-black/40 border-solid border-2 border-black">
                             Sobre
                         </button>
                     </a>
-            
+
                     <a href="#projetos" class="text-black">
                         <button class="p-2 px-9 bg-white rounded-md transition duration-500 ease-in-out hover:shadow-lg hover:bg-verde dark:hover:shadow-black/40 border-solid border-2 border-black">
                             Projetos
                         </button>
                     </a>
-            
+
                     <a href="#contato" class="text-black">
                         <button class="p-2 px-9 bg-white rounded-md transition duration-500 ease-in-out hover:shadow-lg hover:bg-verde dark:hover:shadow-black/40 border-solid border-2 border-black">
                             Contato
                         </button>
                     </a>
                 </div>
-            
+
                 <!-- Menu para dispositivos móveis -->
-                <div id="menu" class="hidden z-50 fixed inset-0 bg-gray-300 h-1/4 flex flex-col items-start space-y-6 text-white transition-all duration-500 transform -translate-x-full">
+                <div id="menu" class="menu hidden z-50 fixed inset-0 bg-gray-300 h-1/4 flex flex-col items-start space-y-6 text-white transition-transform duration-500 transform -translate-x-full">
                     <div class="sm:hidden flex items-center mt-8 ml-4">
                         <button id="closeIcone" class="text-black">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h7"></path>
                             </svg>
                         </button>
-                        <div class="flex text-center text-xl text-black">
+                        <div class="flex text-center text-xl text-black ml-2">
                             <p>Artur - Web Dev</p>
                         </div>
                     </div>
-
-                    <!--Links do menu-->
+                
+                    <!-- Links do Menu -->
                     <div class="flex flex-col ml-10 text-black">
                         <div class="mb-2">
                             <a href="#sobre" class="text-xl menu-item">Sobre</a>
@@ -533,41 +533,44 @@
         const icone = document.getElementById("icone");
         const closeIcone = document.getElementById("closeIcone");
         const menu = document.getElementById("menu");
-
-        // Alterna a visibilidade do menu ao clicar no ícone
+        
+        // Função para abrir o menu com transição suave
         icone.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-            menu.classList.remove("-translate-x-full");
+            menu.classList.remove("hidden");
+            setTimeout(() => menu.classList.remove("-translate-x-full"), 10); // Remova -translate-x-full após um pequeno delay
             document.body.classList.add("overflow-hidden");
-
-                ScrollReveal().reveal('.menu-item', {
+        
+            // Animação ScrollReveal nos itens do menu
+            ScrollReveal().reveal('.menu-item', {
                 origin: 'left',
                 distance: '20px',
                 delay: 200,
                 interval: 200,
                 duration: 500,
+                easing: 'ease-in-out',
+                reset: true
             });
         });
-
-        // Fecha o menu ao clicar no ícone dentro do menu
+    
+        // Função para fechar o menu com transição suave
         closeIcone.addEventListener("click", () => {
-        menu.classList.add("hidden");
-        menu.classList.add("-translate-x-full");
-        document.body.classList.remove("overflow-hidden");
-
-        setTimeout(() => menu.classList.add("hidden"), 500);
+            menu.classList.add("-translate-x-full"); // Adiciona a transição de saída para fora da tela
+            document.body.classList.remove("overflow-hidden");
+            
+            // Aguarde a transição (500ms) antes de aplicar "hidden" para evitar o bug
+            setTimeout(() => menu.classList.add("hidden"), 500);
         });
-
-        // Fecha o menu ao clicar em um item
+    
+        // Fecha o menu ao clicar em um item do menu
         document.querySelectorAll('.menu-item').forEach(item => {
             item.addEventListener('click', () => {
                 menu.classList.add("-translate-x-full");
-                menu.classList.add("hidden");
                 document.body.classList.remove("overflow-hidden");
+                
+                // Aguarde a transição (500ms) antes de ocultar o menu
                 setTimeout(() => menu.classList.add("hidden"), 500);
             });
         });
-
     </script>
 
 </body>
