@@ -517,9 +517,21 @@
         closeIcone.addEventListener("click", () => {
             menu.classList.add("-translate-x-full"); // Adiciona a transição de saída para fora da tela
             document.body.classList.remove("overflow-hidden");
+            setTimeout(() => menu.classList.add("hidden"), 500);
             
             // Aguarde a transição (500ms) antes de aplicar "hidden" para evitar o bug
             setTimeout(() => menu.classList.add("hidden"), 500);
+
+                // Animação ScrollReveal nos itens do menu
+                ScrollReveal().reveal('.menu-item', {
+                origin: 'right',
+                distance: '20px',
+                delay: 200,
+                interval: 200,
+                duration: 500,
+                easing: 'ease-in-out',
+                reset: true
+            });
         });
     
         // Fecha o menu ao clicar em um item do menu
@@ -532,6 +544,27 @@
                 setTimeout(() => menu.classList.add("hidden"), 500);
             });
         });
+
+        // Função para fechar o menu ao rolar a página no modo mobile
+        window.addEventListener("scroll", () => {
+            if (!menu.classList.contains("hidden")) {
+                menu.classList.add("-translate-x-full");
+                document.body.classList.remove("overflow-hidden");
+                setTimeout(() => menu.classList.add("hidden"), 500);
+            }
+        });
+
+        // Fecha o menu ao clicar fora da navbar
+        document.addEventListener("click", (event) => {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickOnIcone = icone.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnIcone && !menu.classList.contains("hidden")) {
+            menu.classList.add("-translate-x-full");
+            document.body.classList.remove("overflow-hidden");
+            setTimeout(() => menu.classList.add("hidden"), 500);
+        }
+    });
     </script>
 
 </body>
